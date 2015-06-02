@@ -7,10 +7,10 @@ Ext.define('Packt.controller.Login', {
     
     init: function(application) {
         this.control({
-            'login button#submit': {
+            'login form button#submit': {
                 click: this.onButtonClickSubmit
             },
-            'login button#cancel': {
+            'login form button#cancel': {
                 click: this.onButtonClickCancel
             }
         });

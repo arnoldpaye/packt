@@ -40,30 +40,29 @@ Ext.define('Packt.view.Login', {
                     fieldLabel: 'Password',
                     maxLength: 10
                 }
-            ]
-        }
-    ],
-    
-    dockedItems: [
-        {
-            xtype: 'toolbar',
-            dock: 'bottom',
-            items: [
+            ],
+            dockedItems: [
                 {
-                    xtype: 'tbfill'
-                },
-                {
-                    xtype: 'button',
-                    itemId: 'cancel',
-                    iconCls: 'cancel',
-                    text: 'Cancel'
-                },
-                {
-                    xtype: 'button',
-                    itemId: 'submit',
-                    formBind: true,
-                    iconCls: 'key-go',
-                    text: 'Submit'
+                    xtype: 'toolbar',
+                    dock: 'bottom',
+                    items: [
+                        {
+                            xtype: 'tbfill'
+                        },
+                        {
+                            xtype: 'button',
+                            itemId: 'cancel',
+                            iconCls: 'cancel',
+                            text: 'Cancel'
+                        },
+                        {
+                            xtype: 'button',
+                            itemId: 'submit',
+                            formBind: true,
+                            iconCls: 'key-go',
+                            text: 'Submit'
+                        }
+                    ]
                 }
             ]
         }
