@@ -30,7 +30,7 @@ Ext.define('Packt.view.Login', {
             },
             items: [
                 {
-                    name: 'users',
+                    name: 'user',
                     fieldLabel: 'User',
                     maxLength: 25
                 },
