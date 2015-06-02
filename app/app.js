@@ -17,11 +17,7 @@ Ext.application({
     
     name: 'Packt',
     
-    requires: [
-        'Packt.view.Login'
-    ],
-    
-    views: [
+    controllers: [
         'Login'
     ],
     
