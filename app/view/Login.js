@@ -1,3 +1,4 @@
+/* global Ext */
 Ext.define('Packt.view.Login', {
     extend: 'Ext.window.Window',
     alias: 'widget.login',
@@ -25,11 +26,11 @@ Ext.define('Packt.view.Login', {
                 allowBlank: false,
                 vtype: 'alphanum',
                 minLength: 3,
-                msgTarget: 'title'
+                msgTarget: 'under'
             },
             items: [
                 {
-                    name: 'user',
+                    name: 'users',
                     fieldLabel: 'User',
                     maxLength: 25
                 },
@@ -37,9 +38,34 @@ Ext.define('Packt.view.Login', {
                     inputType: 'password',
                     name: 'password',
                     fieldLabel: 'Password',
-                    maxLength: 15
+                    maxLength: 10
                 }
             ]
         }
     ],
+    
+    dockedItems: [
+        {
+            xtype: 'toolbar',
+            dock: 'bottom',
+            items: [
+                {
+                    xtype: 'tbfill'
+                },
+                {
+                    xtype: 'button',
+                    itemId: 'cancel',
+                    iconCls: 'cancel',
+                    text: 'Cancel'
+                },
+                {
+                    xtype: 'button',
+                    itemId: 'submit',
+                    formBind: true,
+                    iconCls: 'key-go',
+                    text: 'Submit'
+                }
+            ]
+        }
+    ]
 });
