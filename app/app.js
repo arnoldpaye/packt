@@ -21,6 +21,8 @@ Ext.application({
         'Login'
     ],
     
+    enableQuickTips: true,
+    
     init: function() {
         
         splashscreen = Ext.getBody().mask('Loading application', 'splashscreen');
@@ -32,6 +34,8 @@ Ext.application({
     },
     
     launch: function() {
+        Ext.tip.QuickTipManager.init();
+        
         var task = new Ext.util.DelayedTask(function() {
             
             splashscreen.fadeOut({

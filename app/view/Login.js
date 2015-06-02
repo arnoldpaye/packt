@@ -38,6 +38,8 @@ Ext.define('Packt.view.Login', {
                     inputType: 'password',
                     name: 'password',
                     fieldLabel: 'Password',
+                    enableKeyEvents: true,
+                    id: 'password',
                     maxLength: 10
                 }
             ],
