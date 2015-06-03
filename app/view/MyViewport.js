@@ -29,7 +29,8 @@ Ext.define('Packt.view.MyViewport', {
         {
             xtype: 'container',
             region: 'south',
-            height: 30
+            height: 30,
+            html: 'footer'
         }
     ]
 });
