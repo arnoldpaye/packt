@@ -42,7 +42,7 @@ Ext.define('Packt.controller.Login', {
             
             pass = Packt.util.MD5.encode(pass);
             if (formPanel.getForm().isValid()) {
-                Ext.Ajax.request({
+                /*Ext.Ajax.request({
                     url: 'php/login.php',
                     params: {
                         user: user,
@@ -61,7 +61,9 @@ Ext.define('Packt.controller.Login', {
                     }
                 });
                 
-                Ext.get(login.getEl()).mask('Autenticating...');
+                Ext.get(login.getEl()).mask('Autenticating...');*/
+                login.close();
+                Ext.create('Packt.view.MyViewport');
             }
     },
     
