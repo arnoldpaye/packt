@@ -7,6 +7,7 @@ Ext.define('Packt.controller.Login', {
     
     views: [
         'Login',
+        'Header',
         'authentication.CapsLockTooltip'
     ],
     
@@ -30,6 +31,9 @@ Ext.define('Packt.controller.Login', {
             },
             'login form textfield[name=password]': {
                 keypress: this.onTextfieldKeyPress
+            },
+            'appheader button#logout': {
+                click: this.onButtonClickLogout
             }
         });
     },
@@ -94,5 +98,10 @@ Ext.define('Packt.controller.Login', {
                 this.getCapslockTooltip().hide();
             }
         }
+    },
+    
+    onButtonClickLogout: function(button, e, options) {
+        button.up('mainviewport').destroy();
+        window.location.reload();
     }
 });
